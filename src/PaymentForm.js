@@ -1,17 +1,16 @@
-import React from 'react'
-import FormCloseBtn from './FormCloseBtn'
-import FormPayBtn from './FormPayBtn'
-import './css/PaymentForm.css'
-
+import React from "react";
+import FormCloseBtn from "./FormCloseBtn";
+import FormPayBtn from "./FormPayBtn";
+import "./css/PaymentForm.css";
 
 const PaymentForm = () => {
-    return (
+  return (
     <div className="container py-5 ">
       <div className="row d-flex justify-content-center">
         <div className="col-lg-6 ">
           <div className="card p-5">
-            <FormCloseBtn/>
-            
+            <FormCloseBtn />
+
             <div className="card-header bg-transparent border-0 py-4">
               <h1> Paiement sécurisé par prélèvement bancaire</h1>
             </div>
@@ -20,83 +19,136 @@ const PaymentForm = () => {
               Mise en place d'un mandat SEPA MANGOPAY
             </div>
 
-              <div className="tab-content ">
-                <div id="payment" className="tab-pane fade show active pt-3">
-                  <form role="form" onSubmit="event.preventDefault()">
+            <div className="tab-content ">
+              <div id="payment" className="tab-pane fade show active pt-3">
+                <form role="form" onSubmit="event.preventDefault()">
+                  <div className="form-group mb-3">
+                    <label htmlFor="titulaire">
+                      <h6>
+                        Titulaire du compte <span className="asterix"> *</span>{" "}
+                      </h6>
+                    </label>
+                    <input
+                      type="text"
+                      name="titulaire"
+                      required
+                      className="form-control "
+                      value="Soan solutions"
+                    />
+                  </div>
 
-                    <div className="form-group mb-3">
-                      <label htmlFor="titulaire">
-                        <h6>Titulaire du compte <span id = "asterix"> *</span> </h6>
-                      </label>
-                      <input type="text" name="titulaire" required className="form-control " value = "Soan solutions" /> 
+                  <div className="form-group mb-3">
+                    <label htmlFor="adresse">
+                      <h6>
+                        Adresse du titulaire <span className="asterix"> *</span>
+                      </h6>
+                    </label>
+                    <div className="input-group">
+                      <input
+                        type="text"
+                        name="adresse"
+                        placeholder="Adresse du titulaire"
+                        className="form-control "
+                        required
+                      />
                     </div>
+                  </div>
 
-                    <div className="form-group mb-3">
-                      <label htmlFor="adresse">
-                        <h6>Adresse du titulaire <span id = "asterix"> *</span></h6>
-                      </label>
-                      <div className="input-group">
-                        <input type="text" name="adresse" placeholder="Adresse du titulaire" className="form-control " required />
-                      </div>
-                    </div>
-
-                    <div className="row mb-3">
-                      <div className="col">
-                        <div className="form-outline">
-                          <label className="form-label" htmlFor="ville">Ville <span id = "asterix"> *</span></label>
-                          <input type="text" id="ville" required className="form-control" />
-                        </div>
-                      </div>
-                      
-                      <div className="col">
-                        <div className="form-outline">
-                        <label className="form-label" htmlFor="region">Région <span id = "asterix"> *</span></label>
-                        <input type="text" id="region" required className="form-control" />
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="row mb-3">
-                      <div className="col">
-                        <div className="form-outline">
-                          <label className="form-label" htmlFor="code">Code postal <span id = "asterix"> *</span></label>
-                          <input type="text" id="code" required className="form-control" />
-                        </div>
-                      </div>
-                      
-                      <div className="col">
-                        <div className="form-outline">
-                        <label className="form-label" htmlFor="pays">Pays <span id = "asterix"> *</span></label>
-                        <input type="text" id="pays" required className="form-control" />
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="form-group mb-3">
-                      <label htmlFor="iban">
-                        <h6>Iban <span style= {{color: "#ff0000"}}> *</span> </h6>
-                      </label>
-                      <input type="text" name= "iban" placeholder= {"_ _ _ _  ".repeat(4)} required pattern="^FR\d{2}[ ]\d{4}[ ]\d{4}[ ]\d{4}[ ]\d{4}[ ]\d{2}|FR\d{20}$"className="form-control " /> 
-                    </div>
-
-                    <div className="row justify-content-end ">
-                      <div className="col-3">
-                        <div className = "mt-2"> <strong>Annuler </strong></div>
-                      </div>
-
-                      <div className="col-4">
-                       <FormPayBtn/>
+                  <div className="row mb-3">
+                    <div className="col">
+                      <div className="form-outline">
+                        <label className="form-label" htmlFor="ville">
+                          Ville <span className="asterix"> *</span>
+                        </label>
+                        <input
+                          type="text"
+                          id="ville"
+                          required
+                          className="form-control"
+                        />
                       </div>
                     </div>
 
-                  </form>
-                </div>
+                    <div className="col">
+                      <div className="form-outline">
+                        <label className="form-label" htmlFor="region">
+                          Région <span className="asterix"> *</span>
+                        </label>
+                        <input
+                          type="text"
+                          id="region"
+                          required
+                          className="form-control"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="row mb-3">
+                    <div className="col">
+                      <div className="form-outline">
+                        <label className="form-label" htmlFor="code">
+                          Code postal <span className="asterix"> *</span>
+                        </label>
+                        <input
+                          type="text"
+                          id="code"
+                          required
+                          className="form-control"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="col">
+                      <div className="form-outline">
+                        <label className="form-label" htmlFor="pays">
+                          Pays <span className="asterix"> *</span>
+                        </label>
+                        <input
+                          type="text"
+                          id="pays"
+                          required
+                          className="form-control"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="form-group mb-3">
+                    <label htmlFor="iban">
+                      <h6>
+                        Iban <span className="asterix"> *</span>
+                      </h6>
+                    </label>
+                    <input
+                      type="text"
+                      name="iban"
+                      placeholder={"_ _ _ _  ".repeat(4)}
+                      required
+                      pattern="^FR\d{2}[ ]\d{4}[ ]\d{4}[ ]\d{4}[ ]\d{4}[ ]\d{2}|FR\d{20}$"
+                      className="form-control "
+                    />
+                  </div>
+
+                  <div className="row justify-content-end ">
+                    <div className="col-3">
+                      <div className="mt-2">
+                        <strong>Annuler </strong>
+                      </div>
+                    </div>
+
+                    <div className="col-4">
+                      <FormPayBtn />
+                    </div>
+                  </div>
+                </form>
               </div>
             </div>
+          </div>
         </div>
       </div>
     </div>
-    )
-}
+  );
+};
 
-export default PaymentForm
+export default PaymentForm;
