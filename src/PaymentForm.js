@@ -8,7 +8,6 @@ import { useEffect, useState } from "react";
 
 const PaymentForm = () => {
 
-  //const [color, setColor] = useState("#f5f5f5");
   const location = useLocation();
 
   useEffect(() => {

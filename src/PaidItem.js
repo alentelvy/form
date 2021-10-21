@@ -30,12 +30,10 @@ const PaidItem = () => {
                 </td>
 
                 <td className="col-4 ms-3">
-                  {" "}
                   &#9889; Escompte
                   {element.discount && (
                     <p id="payindays" className="ms-4">
-                      {" "}
-                      Appliqué{" "}
+                      Appliqué
                     </p>
                   )}
                 </td>
@@ -46,12 +44,11 @@ const PaidItem = () => {
                       {getDiscount(
                         parseInt(element.amount),
                         parseInt(element.discount.rate)
-                      )}{" "}
+                      )}
                       €
                       <p id="discounted" className="ms-4">
-                        {" "}
-                        {element.amount} €{" "}
-                      </p>{" "}
+                        {element.amount} €
+                      </p>
                     </span>
                   ) : (
                     <span className="ms-4">{element.amount} € </span>

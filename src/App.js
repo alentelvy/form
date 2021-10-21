@@ -12,12 +12,12 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/paid">
-          <PaidTab />
+      <Route exact path="/">
+          <NotPaidTab />
         </Route>
 
-        <Route exact path="/notpaid">
-          <NotPaidTab />
+        <Route exact path="/paid">
+          <PaidTab />
         </Route>
 
         <Route exact path="/pay">

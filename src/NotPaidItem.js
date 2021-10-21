@@ -41,19 +41,16 @@ const NotPaidItem = ({ setSum }) => {
                   />
                   {element.invoiceNumber}
                   <p id="paybefore" className="ms-4">
-                    {" "}
-                    A régler avant le {element.sentDate}{" "}
+                    A régler avant le {element.sentDate}
                   </p>
                 </td>
 
                 <td className="col-4 ms-4">
-                  {" "}
                   &#9889; Escompte
                   {element.discount && (
                     <p id="payindays" className="ms-4">
-                      {" "}
-                      {element.discount.rate}% pendent{" "}
-                      {element.discount.maxDaysToPay} jours{" "}
+                      {element.discount.rate}% pendent
+                      {element.discount.maxDaysToPay} jours
                     </p>
                   )}
                 </td>

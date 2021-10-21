@@ -8,11 +8,10 @@ const Navbar = () => {
       <div className="navbar-nav">
         <NavLink
           exact
-          to="/notpaid"
+          to="/"
           className="nav-link border-bottom mx-2"
           activeClassName="active"
         >
-          {" "}
           Factures à payer
         </NavLink>
 
@@ -22,7 +21,7 @@ const Navbar = () => {
           className="nav-link border-bottom mx-2"
           activeClassName="active"
         >
-          Factures payées{" "}
+          Factures payées
         </NavLink>
       </div>
     </nav>
