@@ -4,7 +4,11 @@ import PaidTab from "./PaidTab";
 import NotPaidTab from "./NotPaidTab.js";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
+
 function App() {
+
+
+
   return (
     <Router>
       <Switch>
@@ -17,7 +21,7 @@ function App() {
         </Route>
 
         <Route exact path="/pay">
-          <PaymentForm />
+          <PaymentForm/>
         </Route>
       </Switch>
     </Router>

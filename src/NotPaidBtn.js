@@ -1,10 +1,12 @@
 import { useHistory } from "react-router-dom";
 
+
 const NotPaidBtn = ({ sum }) => {
   const history = useHistory();
 
   const handleClick = () => {
     history.push("/pay");
+
   };
 
   return (
@@ -13,8 +15,7 @@ const NotPaidBtn = ({ sum }) => {
       onClick={handleClick}
       className="btn col-4 text-white align-self-end"
     >
-      {" "}
-      Payer {sum} €{" "}
+      Payer {sum} €
     </button>
   );
 };

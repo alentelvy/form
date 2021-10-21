@@ -2,8 +2,24 @@ import React from "react";
 import FormCloseBtn from "./FormCloseBtn";
 import FormPayBtn from "./FormPayBtn";
 import "./css/PaymentForm.css";
+import { useLocation } from 'react-router-dom';
+import { useEffect, useState } from "react";
+
 
 const PaymentForm = () => {
+
+  //const [color, setColor] = useState("#f5f5f5");
+  const location = useLocation();
+
+  useEffect(() => {
+    if(location.pathname == '/pay'){
+      document.body.className = 'newColor';
+      return () => { document.body.className = ''; }
+    }
+  }, [location])
+
+
+
   return (
     <div className="container py-5 ">
       <div className="row d-flex justify-content-center">
@@ -21,7 +37,8 @@ const PaymentForm = () => {
 
             <div className="tab-content ">
               <div id="payment" className="tab-pane fade show active pt-3">
-                <form role="form" onSubmit="event.preventDefault()">
+                <form role="form">
+                  
                   <div className="form-group mb-3">
                     <label htmlFor="titulaire">
                       <h6>
