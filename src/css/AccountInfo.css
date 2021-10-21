@@ -1,0 +1,30 @@
+/*.border-bottom:hover {
+    border-color: black !important;
+}*/
+
+.active {
+    border-color: black !important;
+  }
+
+.form-check-input {
+    background-color: black!important;
+  }
+
+#paybefore {
+    font-size:x-small;
+    color: darkgrey;
+}
+
+#payindays {
+    font-size: x-small;
+    color:#17A589;
+}
+
+.btn {
+    background-color: #17A589
+}
+
+#discounted {
+    font-size: x-small;
+    text-decoration: line-through;
+}
